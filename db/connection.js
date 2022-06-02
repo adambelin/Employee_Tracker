@@ -15,3 +15,5 @@ function insertDepartment() {
     const sql = `INSERT INTO department `
 }
 
+module.exports = db;
+
