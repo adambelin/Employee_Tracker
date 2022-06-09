@@ -3,17 +3,13 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '12345',
-    database: 'employee_tracker_db'
+    database: 'employees_db'
 })
 
 db.connect(err => {
     if (err) throw err;
     console.log('Database connected');
 })
-
-function insertDepartment() {
-    const sql = `INSERT INTO department `
-}
 
 module.exports = db;
 

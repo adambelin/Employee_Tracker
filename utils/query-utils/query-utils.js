@@ -1,4 +1,4 @@
-const questions = require('../../utils/questions');
+const questions = require('../../utils/questions')
 const cTable = require('console.table');
 const inquirer = require('inquirer');
 
@@ -35,7 +35,8 @@ function queryEmployees(db) {
         if (err) throw err;
 
         console.table(rows);
-        return questions();
+        // console.log(typeof questions)
+        return questions()
     });
 }
 
@@ -122,3 +123,4 @@ module.exports.createDepartment = createDepartment;
 module.exports.createEmployee = createEmployee;
 module.exports.updateEmployee = updateEmployee;
 module.exports.getEmployeeList = getEmployeeList;
+

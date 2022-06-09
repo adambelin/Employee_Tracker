@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const getDepartments = require('../routes/apiRoutes/departmentRoutes');
 const queryUtils = require('./query-utils/query-utils');
 const db = require('../db/connection');
 
@@ -164,6 +163,19 @@ module.exports = function () {
                     }
                 }
             },
+            // {
+            //     name: 'updateEmployeeChoices',
+            //     type: 'list',
+            //     message: 'Which employee\'s role would you like to update?',
+            //     when: (answer) => {
+            //         if (answer.options == 'Update an employee role') {
+            //             return true;
+            //         } else {
+            //             return false;
+            //         }
+            //     },
+            //     choices: [queryUtils.getEmployeeList(db)]
+            // }
         ])
         .then(answers => {
             if (answers.options == 'View all departments') {
